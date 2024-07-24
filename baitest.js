@@ -41,15 +41,15 @@ function spin() {
   resetGameButton.disabled = true;
   point.forEach((det1) => (det1.style.pointerEvents = "none"));
 
-  let spins = 100;
-  const interval = setInterval(() => {
+  let spinNing = 100;
+  const detInterval = setInterval(() => {
     random.forEach((slot) => {
       const randomImage = images[Math.floor(Math.random() * images.length)];
       slot.style.backgroundImage = `url(${randomImage})`;
     });
-    spins--;
-    if (spins === 0) {
-      clearInterval(interval);
+    spinNing--;
+    if (spinNing === 0) {
+      clearInterval(detInterval);
       spinGame = false;
       spiGameButton.disabled = false;
       resetGameButton.disabled = false;
